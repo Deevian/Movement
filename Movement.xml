@@ -90,10 +90,6 @@
   
   <!-- Project Libraries -->
   
-  <path id="library.gson-2.2.4.classpath">
-    <pathelement location="${basedir}/gson-2.2.4.jar"/>
-  </path>
-  
   <path id="library.protocollib-3.2.0.classpath">
     <pathelement location="${basedir}/../spigot/plugins/ProtocolLib-3.2.0.jar"/>
   </path>
@@ -139,7 +135,6 @@
     <jar destfile="${temp.jar.path.Movement.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
       <zipfileset file="${basedir}/plugin.yml"/>
       <zipfileset dir="${movement.output.dir}"/>
-      <zipfileset file="${basedir}/gson-2.2.4.jar"/>
     </jar>
     <copy file="${temp.jar.path.Movement.jar}" tofile="${artifact.temp.output.movement}/Movement.jar"/>
   </target>
