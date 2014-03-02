@@ -52,8 +52,8 @@ public class PlayerMovementListener
 //                Double fromY = player.getLocation().getY();
 
                 float yaw = (event.getPacketType() == PacketType.Play.Client.POSITION)
-                        ? Math.abs(player.getLocation().getYaw())
-                        : Math.abs(packet.g()) % 360;
+                        ? player.getLocation().getYaw()
+                        : packet.g() % 360;
                 yaw = (yaw + 90) % 360;
 
                 double zDistance = toZ - fromZ;
